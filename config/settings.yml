@@ -1,4 +1,11 @@
-TODO_plugin_name:
-  plugin_name_enabled:
+find_topics_to_reset_bump_date:
+  enable_find_topics_to_reset_bump_date:
     default: false
-    client: true
+  reset_bump_date_pm_title:
+    default: "Topics found that need resetting of their bump dates in the last 24 hours"
+  reset_bump_date_pm_body:
+    default: "These are the topics in the last 24 hours hat need their bump date to be reset:"
+  send_pm_when_no_topics_to_reset_bump_date:
+    default: false
+  no_topics_to_reset_bump_date_pm_body:
+    default: "No topics found in the last 24 hours that need their bump date to be reset."
