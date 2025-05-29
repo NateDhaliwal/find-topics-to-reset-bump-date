@@ -51,8 +51,9 @@ after_initialize do
       end
 
       topics_need_to_reset.each do |topic_data|
-        
-      
+        rawTopicsToResetBumpDate << "\n- [#{topic_data["topic_title"]}](#{topic_url})"
+      end
+
       # The system user often sends automated messages
       system_user = Discourse.system_user
       
