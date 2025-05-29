@@ -1,1 +1,7 @@
 en:
+  site_settings:
+    enable_find_topics_to_reset_bump_date: "Enable the Find Topics To Reset Bump Date plugin."
+    reset_bump_date_pm_title: "The title of the PM (Private Message) sent to admins notifying them of the topics to reset their bump date."
+    reset_bump_date_pm_body: "The body of the PM (Private Message) sent to admins notifying them of the topics to reset their bump date. The list of topics is appended below this text."
+    send_pm_when_no_topics_to_reset_bump_date: "Even when there are no topics' bump dates that can be reset, still send a PM to the admins."
+    no_topics_to_reset_bump_date_pm_body:
