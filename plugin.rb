@@ -30,7 +30,7 @@ after_initialize do
       
       json["topic_list"]["topics"].each do |topic_data|
         if topic_data["last_posted_at"] != topic_data["bumped_at"]
-          topics_need_to_reset.push({"topic_id" => topic_data["id"], "topic_title" => topic_data["title"], "topic_url" => "#{Discourse.base_url}/t/-/#{topic_data["id"}"})
+          topics_need_to_reset.push({"topic_id" => topic_data["id"], "topic_title" => topic_data["title"], "topic_url" => "#{Discourse.base_url}/t/-/#{topic_data["id"]}"})
         end
       end
         
