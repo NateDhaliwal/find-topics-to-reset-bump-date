@@ -33,17 +33,15 @@ after_initialize do
           topics_need_to_reset.push({"topic_id" => topic_data["id"], "topic_title" => topic_data["title"], "topic_url" => "#{Discourse.base_url}/t/-/#{topic_data["id"]}"})
         end
       end
-        
-      # Find the admin group
-      admin_group = Group.find_by(name: "admins")
       
       # Compose your PM details
       title = SiteSetting.reset_bump_date_pm_title
       raw = SiteSetting.reset_bump_date_pm_body
       rawTopicsToResetBumpDate = ""
-        
+      
       if SiteSetting.send_pm_when_no_topics_to_reset_bump_date == true 
         if topics_need_to_reset.length() == 0
+          title = SiteSetting.no_topics_to_reset_bump_date_pm_title
           raw = SiteSetting.no_topics_to_reset_bump_date_pm_body
         else
           raw = SiteSetting.reset_bump_date_pm_body
@@ -52,8 +50,11 @@ after_initialize do
 
       topics_need_to_reset.each do |topic_data|
         rawTopicsToResetBumpDate << "\n- [#{topic_data["topic_title"]}](#{topic_url})"
-      end
-
+      end      
+        
+      # Find the admin group
+      admin_group = Group.find_by(name: "admins")
+      
       # The system user often sends automated messages
       system_user = Discourse.system_user
       
