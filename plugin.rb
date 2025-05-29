@@ -21,7 +21,7 @@ end
 
 after_initialize do
   class ::Jobs::FindTopics < Jobs::Scheduled
-    every 12.hours # Run everyday
+    every 2.minutes # Run everyday
 
     def execute(args)
       topics_list = "#{Discourse.base_url}/latest.json"
