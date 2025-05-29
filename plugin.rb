@@ -7,10 +7,6 @@
 # authors: NateDhaliwal
 # url: TODO
 
-require "net/http"
-require "json"
-require "uri"
-
 enabled_site_setting :enable_find_topics_to_reset_bump_date
 
 after_initialize do
