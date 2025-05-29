@@ -13,8 +13,8 @@ require "uri"
 
 enabled_site_setting :enable_find_topics_to_reset_bump_date
 
-module ::MyPluginModule
-  PLUGIN_NAME = "discourse-plugin-name"
+module ::FindTopicsToResetBumpDate
+  PLUGIN_NAME = "find-topics-to-reset-bump-date"
 end
 
 #require_relative "lib/my_plugin_module/engine"
