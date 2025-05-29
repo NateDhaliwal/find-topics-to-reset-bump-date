@@ -48,6 +48,9 @@ after_initialize do
         end
       end
 
+      # Add newline below body text for suitable spacing, above the list of topics
+      raw << "\n"
+      
       topics_need_to_reset.each do |topic_data|
         rawTopicsToResetBumpDate << "\n- [#{topic_data["topic_title"]}](#{topic_url})"
       end      
