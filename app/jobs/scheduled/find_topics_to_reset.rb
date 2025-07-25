@@ -2,7 +2,7 @@
 
 module FindTopicsToReset
   class FindTopics < ::Jobs::Scheduled
-    every 12.hours # Run everyday
+    every 12.hours # Run twice a day
 
     def execute(args)
       topics_list = "#{Discourse.base_url}/latest.json"
